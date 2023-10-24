@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
-    <title>Spring Security - OAuth 2.0 Login</title>
+    <title>OAuth2 WebClient Showcase</title>
     <meta charset="utf-8" />
 </head>
 <body>
-<div style="float: right" th:fragment="logout" sec:authorize="isAuthenticated()">
-    <div style="float:left">
-        <span style="font-weight:bold">User: </span><span sec:authentication="name"></span>
-    </div>
-    <div style="float:none">&nbsp;</div>
-    <div style="float:right">
-        <form action="#" th:action="@{/logout}" method="post">
-            <input type="submit" value="Logout" />
-        </form>
-    </div>
-</div>
-<h1>OAuth 2.0 Login with Spring Security</h1>
-<div>
-    You are successfully logged in <span style="font-weight:bold" th:text="${userName}"></span>
-</div>
+<a th:href="@{/logout}">Log Out</a>
+<h1>Endpoints</h1>
+
+<h2>Private</h2>
+<ul>
+    <li><a th:href="@{/messages}">Private</a> endpoint where Google auth is required</li>
+</ul>
+<h2>Public</h2>
+<ul>
+    <li><a th:href="@{/public/messages}">Public</a> endpoint where no authentication is required</li>
+</ul>
+
 </body>
 </html>
