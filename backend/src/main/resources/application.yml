@@ -1,8 +1,8 @@
 spring:
   security:
     oauth2:
-      client:
-        registration:
-          google:
-            clientId: "..."
-            clientSecret: "..."
+      resourceserver:
+        opaque-token:
+          introspection-uri: https://www.googleapis.com/
+          clientId: "..."
+          clientSecret: "..."

@@ -1,15 +1,15 @@
 package com.sergio.oauth2.backend.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import com.sergio.oauth2.backend.dtos.MessageDto;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class PublicController {
 
     @GetMapping("/public/messages")
-    public String publicMessages(Model model) {
-        model.addAttribute("body", "Nobody");
-        return "response";
+    public ResponseEntity<MessageDto> publicMessages() {
+        return ResponseEntity.ok(new MessageDto("public content"));
     }
 }
