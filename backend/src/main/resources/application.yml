@@ -1,8 +1,12 @@
+auth:
+  cognitoUri: https://857388178255-my-pool.auth.eu-west-1.amazoncognito.com
+
 spring:
   security:
     oauth2:
       resourceserver:
-        opaque-token:
-          introspection-uri: https://www.googleapis.com/
-          clientId: "..."
-          clientSecret: "..."
+        jwt:
+          clientId: 6bb9ejaa2jtjmbj2grpa9o2arm
+          clientSecret: q81f8ta5bnhgf24rk80cc0alnrgmajhto6o13j3s80iah27bi47
+          jwk-set-uri: https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_yj2fQD7Nq/.well-known/jwks.json
+          issuer-uri: https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_yj2fQD7Nq

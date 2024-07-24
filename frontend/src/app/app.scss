@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333; /* Dark background color */
+}
+
+.centered-div {
+  background-color: #fff; /* Light background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto; /* To handle overflow content */
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.Loader {
+  display: flex;
+  justify-content: center;
+}
